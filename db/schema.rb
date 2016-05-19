@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519014540) do
+ActiveRecord::Schema.define(version: 20160519195900) do
 
   create_table "catos", force: :cascade do |t|
     t.string   "starts"
@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20160519014540) do
   end
 
   create_table "encounters", force: :cascade do |t|
-    t.string   "user"
-    t.string   "cato"
+    t.string   "defender_id"
+    t.string   "attacker_id"
     t.string   "expires"
     t.string   "tier"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "location"
   end
 
