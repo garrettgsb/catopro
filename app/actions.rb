@@ -24,7 +24,7 @@ end
 
 post '/user' do
   @user = User.new(
-    username: params[:username]
+    username: params[:username],
     password: params[:password]
     ###
   )
@@ -32,6 +32,7 @@ post '/user' do
     redirect '####'
   else
     erb :'/user/new'
+  end
 end
 
 get '/user/:id' do
